@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파도 끝 식탁</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #eaf4f3;
+      color: #29434a;
+      text-align: center;
+      padding: 30px 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #79b9b3;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>파도 끝 식탁</h1>
+  <p>조용한 바닷가에서 오늘도 낚시를 시작해요.</p>
+
+  <p id="fish-count">잡은 물고기: 0마리</p>
+  <button id="fish-button">🎣 낚시하기</button>
+
+  <script>
+    let fishCount = 0;
+
+    const fishButton = document.querySelector("#fish-button");
+    const fishCountText = document.querySelector("#fish-count");
+
+    fishButton.addEventListener("click", function () {
+      fishCount = fishCount + 1;
+      fishCountText.textContent = "잡은 물고기: " + fishCount + "마리";
+    });
+  </script>
+</body>
+</html>
